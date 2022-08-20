@@ -1,0 +1,253 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    width: 100%;
+    height: 70px;
+    background-color: rgb(21, 49, 45);
+    color: white;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.contenedor{
+    width: 98%;
+    margin: auto;
+
+}
+
+.contenedor img{
+   float: left;
+    width: 70px;
+    height: 70px;
+}
+
+#menu-bar{
+    display: none;
+}
+
+header label{
+    float: right;
+    font-size: 30px;
+    margin: 20px 0;
+    cursor: pointer;
+
+}
+
+.contenedor .carro{
+    width: 30px;
+    height: 30px;
+    margin-top: 22px;
+}
+.carro{
+    position: absolute;
+    right: 45px;
+    width: 5px;
+    height: 5px;
+}
+
+
+
+
+.menu{
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 50%;
+    height: 100vh;
+    border-radius: 5px;
+    background: rgba(4, 14, 9, 0.877);
+    transition: all 0.5s;
+    transform: translateX(-100%);
+    margin-top: 10px;
+}
+
+.menu a{
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    height: 50px;
+    padding: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.menu a:hover {
+    background: rgba(255,255,255,0.3);
+}
+
+#menu-bar:checked ~ .menu {
+    transform: translateX(0%);
+}
+
+
+header .contenedor{
+    display: table;
+}
+
+section{
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+#banner{
+    margin-top: 50px;
+    position: relative;
+}
+
+#banner img{
+    width: 100%;
+    height: 100%;
+}
+
+#banner .contenedor{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    color:#fff;
+}
+#banner h2{
+    font-size: 28px;
+    font-family: 'Jost', sans-serif;
+    color: rgb(255, 196, 0);
+}
+
+#banner a{
+    width: 100px;
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    margin-top: 10px;
+    border: 3px solid #fff;   
+}
+
+#banner a:hover{
+    background: rgba(51, 51, 51, 0.3);
+}
+
+#bienvenidos {
+    text-align: center;
+    font-family: 'Alumni Sans Pinstripe', sans-serif;
+
+}
+
+#Productos .contenedor{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+#Productos article{
+    margin: 15px;
+}
+
+#Productos img {
+    width: 100%;
+    max-width: 280px;
+    width: 200px;
+    height: 300px;
+}
+
+#Productos h3 ,h4{
+    text-align: center;
+    font-family: 'Jost', sans-serif;
+}
+
+
+
+footer .contenedor{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.redes{
+    font-size: 20px;
+    font-family: 'Jost';
+}
+
+.Sociales{
+    width: 100%;
+    text-align: center;
+    font-size: 28px;
+    
+}
+
+.Sociales a{
+    color: #333;
+    text-decoration: none;
+
+}
+
+@media (min-width:1024px){
+    .menu {
+        position: static;
+        width: auto;
+        height: auto;
+        transform: translateX(0%);
+        float: right;
+        display: flex;
+    }
+    .menu a{
+        border: none;
+    }
+
+
+    header label {
+        display: none;
+    }
+}
+
+@media (min-width:1024px){
+    .contenedor{
+        width: 1000px;
+    }
+}
+
+
+@media (min-width:480px){
+    #banner h2{
+        font-size: 40px;
+    }
+    #banner a{
+        margin-top: 26px;
+    }
+}
+
+
+@media (min-width:768px){
+    #banner {
+        height: 300px;
+        overflow: hidden;
+    }
+    #banner img{
+        height: auto;
+        margin-top: -100px;
+    }
+}
+
+@media (min-width:1024px){
+    
+    #banner img{
+        margin-top: -200px;
+    }
+}
+
+@media (min-width:768px){
+    .Sociales{
+        width: auto;
+    }
+
+    footer .contenedor{
+        justify-content: space-between;
+    }
+}
